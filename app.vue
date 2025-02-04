@@ -6,9 +6,9 @@
       </button>
     </div>
     <div class="div-matrix_butt">
-      <button class="matrix-fate">
+      <NuxtLink to="/matrix_fate" class="matrix-fate">
         Матрица судьбы
-      </button>
+      </NuxtLink>
       <button class="matrix-year">
         Матрица года
       </button>
@@ -160,7 +160,8 @@
   </svg>
 
   
-</section></template>
+</section>
+</template>
 
 <script setup lang="ts">
 </script>
