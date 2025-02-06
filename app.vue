@@ -9,11 +9,14 @@
       <NuxtLink to="/matrix_fate" class="matrix-fate">
         Матрица судьбы
       </NuxtLink>
-      <button class="matrix-year">
+      <NuxtLink to="/matrix_year" class="matrix-year">
         Матрица года
-      </button>
+      </NuxtLink>
     </div>
-    <div class="container">
+    <NuxtLayot>
+      <NuxtPage />
+    </NuxtLayot>
+    <!-- <div class="container">
 
 <form action="" class="form">
 
@@ -157,14 +160,13 @@
       style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="464" y="578" class="matrix-text"
       style="font-size: 30px;">5</text><text x="434" y="544" fill="#EFA1A1"
       style="font: bold 30px Cakra, serif;">♥</text>
-  </svg>
+  </svg> -->
 
-  
-</section>
+
+  </section>
 </template>
 
 <script setup lang="ts">
 </script>
 
-<style lang="scss">@use "~/assets/css/style.css";
-</style>
+<style lang="scss">@use "~/assets/css/style.css";</style>
