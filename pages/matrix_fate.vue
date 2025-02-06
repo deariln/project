@@ -12,6 +12,10 @@
         <!-- <iframe style="width: 100%; height: 850px; border: none; overflow: hidden;" src="https://matrix-profi.ru/yourcalc"></iframe> -->
     </div>
 
+    <div class="div-butt_fate">
+        <button class="butt-fate" >Рассчитать</button>
+    </div>
+
     <svg id="matrixSVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
         <line id="line-1-2" x1="36" y1="400" x2="400" y2="36" class="line-segment"
             style="stroke-dasharray: 514.774; stroke-dashoffset: 0;"></line>

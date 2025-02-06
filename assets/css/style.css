@@ -90,6 +90,38 @@
     outline: none;
 }
 
+.div-butt_fate{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.butt-fate{
+    width: 170px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(221,173,175);
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(221,173,175);
+}
+
+.div-butt_year{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.butt-year{
+    width: 170px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(221,173,175);
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(221,173,175);
+}
+
+
 #matrixSVG{
     display: flex;
     width: 600px;

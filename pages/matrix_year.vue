@@ -14,6 +14,10 @@
         </form>
     </div>
 
+    <div class="div-butt_year">
+        <button class="butt-year" >Рассчитать</button>
+    </div>
+
     <svg id="matrixSVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
         <line id="line-1-2" x1="56" y1="400" x2="400" y2="56" class="line-segment"
             style="stroke-dasharray: 486.489; stroke-dashoffset: 0;"></line>
