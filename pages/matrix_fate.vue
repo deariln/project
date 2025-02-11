@@ -29,8 +29,10 @@
             style="stroke-dasharray: 364; stroke-dashoffset: 0;"></line>
         <line id="line-2-5" x1="400" y1="36" x2="400" y2="400" class="line-segment"
             style="stroke-dasharray: 364; stroke-dashoffset: 0;"></line>
+
         <line id="line-3-5" x1="764" y1="400" x2="400" y2="400" class="line-segment"
         style="stroke-dasharray: 364; stroke-dashoffset: 0;"></line>
+
     <line id="line-4-5" x1="400" y1="764" x2="400" y2="400" class="line-segment"
         style="stroke-dasharray: 364; stroke-dashoffset: 0;"></line>
     <line id="line-1-6" x1="36" y1="400" x2="142" y2="142" class="line-segment"
@@ -87,8 +89,15 @@
         style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
     <circle cx="583" cy="217" r="22" class="matrix-circle"
         style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+
     <circle cx="658" cy="400" r="22" class="matrix-circle"
         style="stroke: rgb(242, 181, 125); fill: rgb(255, 255, 255);"></circle>
+
+        <circle cx="450" cy="400" r="20" class="matrix-circle"
+        style="stroke: rgb(117, 117, 117); fill: rgb(255, 255, 255);"></circle>
+        <circle cx="496" cy="400" r="20" class="matrix-circle"
+        style="stroke: rgb(117, 117, 117); fill: rgb(255, 255, 255);"></circle>
+
     <circle cx="583" cy="583" r="22" class="matrix-circle"
         style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
     <circle cx="400" cy="658" r="22" class="matrix-circle"
@@ -123,7 +132,44 @@
     <circle cx="464" cy="576" r="22" class="matrix-circle"
         style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="434" y="544" fill="#EFA1A1"
         style="font: bold 30px Cakra, serif;">♥</text>
-</svg></template>
+</svg>
+
+<svg class="svg-two"  viewBox="0 0 1024 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    <text x="325" y="50" text-anchor="middle" class="title">Личное
+      <tspan x="325" dy="1.2em">предназначение:</tspan>
+    </text>
+    <path d="M350 140 L460 175" class="line"></path>
+    <path d="M350 210 L460 175" class="line"></path>
+    <text x="300" y="145" text-anchor="end" class="title">Небо:</text>
+    <circle cx="350" cy="140" r="29" class="circle"></circle>
+    <text x="350" y="140" class="circle-label" id="svg31"></text>
+    <text x="300" y="215" text-anchor="end" class="title">Земля:</text>
+    <circle cx="350" cy="210" r="29" class="circle"></circle>
+    <text x="350" y="210" class="circle-label" id="svg32"></text>
+    <circle cx="460" cy="175" r="29" class="circle"></circle>
+    <text x="460" y="175" class="circle-label" id="svg33"></text>
+    <text x="710" y="50" text-anchor="middle" class="title">Социальное
+      <tspan x="710" dy="1.2em">предназначение:</tspan>
+    </text>
+    <path d="M690 140 L800 175" class="line"></path>
+    <path d="M690 210 L800 175" class="line"></path>
+    <text x="640" y="145" text-anchor="end" class="title">М:</text>
+    <circle cx="690" cy="140" r="29" class="circle"></circle>
+    <text x="690" y="140" class="circle-label" id="svg34"></text>
+    <text x="640" y="215" text-anchor="end" class="title">Ж:</text>
+    <circle cx="690" cy="210" r="29" class="circle"></circle>
+    <text x="690" y="210" class="circle-label" id="svg35"></text>
+    <circle cx="800" cy="175" r="29" class="circle"></circle>
+    <text x="800" y="175" class="circle-label" id="svg36"></text>
+    <text x="400" y="290" text-anchor="end" class="title">Духовная гармония:</text>
+    <circle cx="460" cy="270" r="29" class="circle"></circle>
+    <text x="460" y="270" class="circle-label" id="svg37"></text>
+    <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
+    <circle cx="800" cy="270" r="29" class="circle"></circle>
+    <text x="800" y="270" class="circle-label" id="svg38"></text>
+  </svg>
+</template>
 
 <script setup lang="ts">
 // definePageMeta({
