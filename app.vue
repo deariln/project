@@ -13,9 +13,9 @@
         Матрица года
       </NuxtLink>
     </div>
-    <NuxtLayot>
+    <NuxtLayout>
       <NuxtPage />
-    </NuxtLayot>
+    </NuxtLayout>
     <!-- <div class="container">
 
 <form action="" class="form">
