@@ -86,14 +86,23 @@
 
         <circle cx="142" cy="142" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+            <text x="133" y="147" fill="#000000" style="font: bold 22px Cakra, serif;">{{ leftUp }}</text>
+
         <circle cx="658" cy="142" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+            <text x="648" y="149" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightUp }}</text>
+
         <circle cx="658" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+            <text x="650" y="650" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightDown }}</text>
+
         <circle cx="142" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+
         <circle cx="142" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
+            <text x="140" y="410" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdLeft }}</text>
+
         <circle cx="217" cy="217" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
         <circle cx="400" cy="142" r="22" class="matrix-circle"
@@ -189,6 +198,10 @@ const dayNum = ref('')
 const monthNum = ref('')
 const yearNum = ref('')
 const mainNum = ref('')
+const leftUp = ref('')
+const rightUp = ref('')
+const rightDown = ref('')
+const thirdLeft = ref('')
 
 const calculate = () => {
     const arr = birthday.value.split('-')
@@ -214,6 +227,20 @@ const calculate = () => {
     let mainNumNum = (parseInt(yearNum.value) + parseInt(monthNum.value) + parseInt(dayNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0)
     let main = (mainNumNum + parseInt(fateNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0);
     mainNum.value = main.toString();
+
+    let leftUpNum = (dayNum.value + monthNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    leftUp.value = leftUpNum.toString()
+
+    let rightUpNum = (monthNum.value + yearNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    rightUp.value = rightUpNum.toString()
+
+    // let rightDownNum = (yearNum.value + fateNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    // let rightDownNumNum = (rightDownNum + (fateNum.value)).toString().split('').reduce((a, el) => a + (+el), 0)
+    // rightDown.value = rightDownNumNum.toString()
+    
+
+
+
 }
 </script>
 
