@@ -94,7 +94,7 @@
 
         <circle cx="658" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="650" y="650" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightDown }}</text>
+            <text x="652" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightDown }}</text>
 
         <circle cx="142" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
@@ -234,11 +234,14 @@ const calculate = () => {
     let rightUpNum = (monthNum.value + yearNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
     rightUp.value = rightUpNum.toString()
 
-    // let rightDownNum = (yearNum.value + fateNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
-    // let rightDownNumNum = (rightDownNum + (fateNum.value)).toString().split('').reduce((a, el) => a + (+el), 0)
-    // rightDown.value = rightDownNumNum.toString()
-    
 
+    //  let rightDownNum = (yearNum.value + fateNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    //  let rightDownNumNum = (rightDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    //  rightDown.value = rightDownNumNum.toString()
+ 
+    
+    // let thirdLeftNum = (dayNum.value + mainNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    // thirdLeft.value = thirdLeftNum.toString()
 
 
 }
