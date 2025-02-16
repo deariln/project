@@ -4,18 +4,18 @@
         <form action="" class="form">
 
             <!-- <label  for="name" class="form__label">Name</label> -->
-            <input class="input-text"  type="text" placeholder="Имя" id="name" />
 
             <!-- <label for="birthday">Дата рождения:</label> -->
-            <input class="input-date" type="date" id="birthday" name="birthday">
+            <input class="input-date" type="date" id="birthday" name="birthday" v-model="birthday">
              
             <!-- <label for="number">Год</label> -->
-            <input class="input-year" type="number" min="1900" max="2099" step="1" placeholder="Год"   />
+            <input class="input-year" type="number" min="1900" max="2099" step="1" placeholder="Год" v-model="yearNumber">
+            {{ birthday }}
         </form>
     </div>
 
     <div class="div-butt_year">
-        <button class="butt-year" >Рассчитать</button>
+        <button class="butt-year" @click="calculate" >Рассчитать</button>
     </div>
 
     <svg id="matrixSVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
@@ -48,6 +48,31 @@
 </svg></template>
 
 <script setup lang="ts">
+const birthday = ref('2006-07-31')
+const yearNumber = ref('2025')
+const leftNumber = ref('')
+
+
+const calculate = () => {
+    const arr = birthday.value.split('-')
+    const day = arr[2]
+    const month = arr[1]
+    const year = arr[0]
+
+
+
+    let yearNumberNum = (day + month + year).split('').reduce((a, el) => a + (+el), 0)
+    yearNumber.value = yearNumberNum.toString()
+
+    
+    // let leftNumberNum = (parseInt(.value) + parseInt( .value))
+    // if (leftNumberNum > 22) {
+    //     leftNumberNum = (leftNumberNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    // }
+    // leftNumber.value = leftNumberNum.toString()
+
+
+}
 </script>
 
 <style scoped></style>

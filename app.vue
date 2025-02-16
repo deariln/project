@@ -2,7 +2,7 @@
   <section class="body">
     <div class="div-butt_main">
       <button class="button-main">
-        ГЛАВНАЯ СТРАНИЦА
+       vika.ashram
       </button>
     </div>
     <div class="div-matrix_butt">
