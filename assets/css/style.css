@@ -124,7 +124,7 @@
 
 #matrixSVG{
     display: flex;
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     padding: 20px 30px;
 }
@@ -223,3 +223,57 @@
     margin: 0 auto;
     padding: 20px 30px;
 }
+
+.svg-2000{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+
+.parnter1{
+    display: flex;
+    width: 600px;
+    padding: 20px 30px;
+    margin-left: 180px;
+}
+
+.partner2{
+    display: flex;
+    width: 600px;
+    padding: 20px 30px;
+    
+}
+
+.container-partners {
+       display: flex  ;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+.p-one_partner{
+    text-align: left;
+    padding: 10px;
+
+}
+
+
+.p-two_partner{
+    text-align: right;
+    padding: 10px;
+   
+}
+
+.h-comp{
+    text-align: center;
+    padding: 20px;
+}
+
+.svg-comp{
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+

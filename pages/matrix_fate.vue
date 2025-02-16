@@ -215,11 +215,17 @@
         <path d="M350 210 L460 175" class="line"></path>
         <text x="300" y="145" text-anchor="end" class="title">Небо:</text>
         <circle cx="350" cy="140" r="25" class="circle"></circle>
+        <text x="345" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ sky }}</text>
+
         <text x="350" y="140" class="circle-label" id="svg31"></text>
         <text x="300" y="215" text-anchor="end" class="title">Земля:</text>
         <circle cx="350" cy="210" r="25" class="circle"></circle>
+        <text x="340" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ earth }}</text>
+
         <text x="350" y="210" class="circle-label" id="svg32"></text>
         <circle cx="460" cy="175" r="25" class="circle"></circle>
+        <text x="450" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ skyEarth }}</text>
+
         <text x="460" y="175" class="circle-label" id="svg33"></text>
         <text x="710" y="50" text-anchor="middle" class="title">Социальное
             <tspan x="710" dy="1.2em">предназначение:</tspan>
@@ -228,17 +234,27 @@
         <path d="M690 210 L800 175" class="line"></path>
         <text x="640" y="145" text-anchor="end" class="title">М:</text>
         <circle cx="690" cy="140" r="25" class="circle"></circle>
+        <text x="681" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ manLine }}</text>
+
         <text x="690" y="140" class="circle-label" id="svg34"></text>
         <text x="640" y="215" text-anchor="end" class="title">Ж:</text>
         <circle cx="690" cy="210" r="25" class="circle"></circle>
+        <text x="680" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ womanLine }}</text>
+
         <text x="690" y="210" class="circle-label" id="svg35"></text>
         <circle cx="800" cy="175" r="25" class="circle"></circle>
+        <text x="795" y="182" fill="#000000" style="font: bold 22px Cakra, serif;">{{ manWoman }}</text>
+
         <text x="800" y="175" class="circle-label" id="svg36"></text>
         <text x="400" y="290" text-anchor="end" class="title">Духовная гармония:</text>
         <circle cx="460" cy="270" r="25" class="circle"></circle>
+        <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ spiritual }}</text>
+
         <text x="460" y="270" class="circle-label" id="svg37"></text>
         <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
         <circle cx="800" cy="270" r="25" class="circle"></circle>
+        <text x="791" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ planetary }}</text>
+
         <text x="800" y="270" class="circle-label" id="svg38"></text>
     </svg>
 
@@ -284,6 +300,14 @@ const dollar = ref('')
 const secondMainLeft = ref('')
 const thirdMainRight = ref('')
 const secondMainUp = ref('')
+const sky = ref('')
+const earth = ref('')
+const skyEarth = ref('')
+const manLine = ref('')
+const womanLine = ref('')
+const manWoman = ref('')
+const spiritual = ref('')
+const planetary = ref('')
 
 const calculate = () => {
     const arr = birthday.value.split('-')
@@ -487,6 +511,57 @@ const calculate = () => {
         secondMainUpNum = (secondMainUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
     }
     secondMainUp.value = secondMainUpNum.toString()
+
+      
+    let skyNum = (parseInt(monthNum.value) + parseInt( fateNum.value))
+    if (skyNum > 22) {
+        skyNum = (skyNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    sky.value = skyNum.toString()
+
+    let earthNum = (parseInt(dayNum.value) + parseInt( yearNum.value))
+    if (earthNum > 22) {
+        earthNum = (earthNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    earth.value = earthNum.toString()
+
+    let skyEarthNum = (parseInt(sky.value) + parseInt( earth.value))
+    if (skyEarthNum > 22) {
+        skyEarthNum = (skyEarthNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    skyEarth.value = skyEarthNum.toString()
+
+    
+    let manLineNum = (parseInt(leftUp.value) + parseInt( rightDown.value))
+    if (manLineNum > 22) {
+        manLineNum = (manLineNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    manLine.value = manLineNum.toString()
+
+        
+    let womanLineNum = (parseInt(leftDown.value) + parseInt( rightUp.value))
+    if (womanLineNum > 22) {
+        womanLineNum = (womanLineNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    womanLine.value = womanLineNum.toString()
+
+    let manWomanNum = (parseInt(manLine.value) + parseInt( womanLine.value))
+    if (manWomanNum > 22) {
+        manWomanNum = (manWomanNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    manWoman.value = manWomanNum.toString()
+
+    let spiritualNum = (parseInt(skyEarth.value) + parseInt( manWoman.value))
+    if (spiritualNum > 22) {
+        spiritualNum = (spiritualNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    spiritual.value = spiritualNum.toString()
+
+    let planetaryNum = (parseInt(spiritual.value) + parseInt( manWoman.value))
+    if (planetaryNum > 22) {
+        planetaryNum = (planetaryNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
+    planetary.value = planetaryNum.toString()
 }
 </script>
 
