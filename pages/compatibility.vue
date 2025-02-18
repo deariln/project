@@ -640,7 +640,7 @@
 
 <script setup lang="ts">
 const birthday = ref('2006-07-31')
-const birthdayTwo = ref('')
+const birthdayTwo = ref('2007-01-03')
 const fateNum = ref('')
 const dayNum = ref('')
 const monthNum = ref('')

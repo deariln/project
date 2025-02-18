@@ -267,6 +267,7 @@
 </template>
 
 <script setup lang="ts">
+import {useMatrix} from '~/store/matrix'
 const birthday = ref('2006-07-31')
 const fateNum = ref('')
 const dayNum = ref('')
@@ -308,6 +309,7 @@ const womanLine = ref('')
 const manWoman = ref('')
 const spiritual = ref('')
 const planetary = ref('')
+const matrixStore = useMatrix()
 
 const calculate = () => {
     const arr = birthday.value.split('-')
@@ -316,28 +318,49 @@ const calculate = () => {
     const year = arr[0]
 
     let fateNumNum = (day + month + year).split('').reduce((a, el) => a + (+el), 0)
+    if (fateNumNum > 22) {
+        fateNumNum = (fateNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
     fateNum.value = fateNumNum.toString()
     let dayNumNum = (day).split('').reduce((a, el) => a + (+el), 0)
+    if (dayNumNum > 22) {
+        dayNumNum = (dayNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
     // if (![11, 22, 33].includes(dayNumNum)) {
-    //     dayNumNum = dayNumNum.toString().split('').reduce((a,el)=> a+(+el),0)
-    // }
-    dayNum.value = dayNumNum.toString()
-    
-    let monthNumNum = (month).split('').reduce((a, el) => a + (+el), 0)
-    monthNum.value = monthNumNum.toString()
-    
-    
-    let yearNumNum = (year).split('').reduce((a, el) => a + (+el), 0)
-    yearNum.value = yearNumNum.toString()
+        //     dayNumNum = dayNumNum.toString().split('').reduce((a,el)=> a+(+el),0)
+        // }
+        dayNum.value = dayNumNum.toString()
+        
+        let monthNumNum = (month).split('').reduce((a, el) => a + (+el), 0)
+        if (monthNumNum > 22) {
+            monthNumNum = (monthNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
+        }
+        monthNum.value = monthNumNum.toString()
+        
+        
+        let yearNumNum = (year).split('').reduce((a, el) => a + (+el), 0)
+        if (yearNumNum > 22) {
+            yearNumNum = (yearNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
+        }
+        yearNum.value = yearNumNum.toString()
     
     let mainNumNum = (parseInt(yearNum.value) + parseInt(monthNum.value) + parseInt(dayNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0)
+    if (mainNumNum > 22) {
+        mainNumNum = (mainNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
     let main = (mainNumNum + parseInt(fateNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0);
     mainNum.value = main.toString();
     
     let leftUpNum = (dayNum.value + monthNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    if (leftUpNum > 22) {
+        leftUpNum = (leftUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
     leftUp.value = leftUpNum.toString()
     
     let rightUpNum = (monthNum.value + yearNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
+    if (rightUpNum > 22) {
+        rightUpNum = (rightUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
+    }
     rightUp.value = rightUpNum.toString()
     
     
@@ -560,8 +583,12 @@ const calculate = () => {
     let planetaryNum = (parseInt(spiritual.value) + parseInt( manWoman.value))
     if (planetaryNum > 22) {
         planetaryNum = (planetaryNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
+    } 
     planetary.value = planetaryNum.toString()
+    matrixStore.shared.dayNum = dayNum.value
+    matrixStore.shared.monthNum = monthNum.value
+    matrixStore.shared.yearNum = yearNum.value
+    matrixStore.shared.fateNum = fateNum.value
 }
 </script>
 
