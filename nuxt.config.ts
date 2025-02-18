@@ -19,10 +19,6 @@ export default defineNuxtConfig({
     }
   },
 
-  nitro: {
-    // plugins: ['plugins/extend-html.ts']
-  },
-
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
