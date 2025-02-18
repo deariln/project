@@ -29,15 +29,5 @@ export default defineNuxtConfig({
     },
   },
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler',
-        },
-      },
-    }
-  },
-
-  modules: ['@pinia/nuxt', '@nuxt/image']
+  modules: ['@pinia/nuxt']
 })

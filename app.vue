@@ -172,4 +172,4 @@
 <script setup lang="ts">
 </script>
 
-<style lang="scss">@use "~/assets/css/style.css";</style>
+<style>@import "~/assets/css/style.css";</style>
