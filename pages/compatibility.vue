@@ -21,7 +21,7 @@
             <div class="p-one_partner">
                 <p>Матрица первого партнера</p>
             </div>
-            <svg id="partner1SVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+            <svg id="partner1SVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet" >
                 <line id="lineC-1-2" x1="36" y1="400" x2="400" y2="36" class="line-segment"
                     style="stroke-dasharray: 514.774; stroke-dashoffset: 0; stroke: rgb(64, 62, 63); fill: none;">
                 </line>
@@ -438,7 +438,7 @@
 
         <circle cx="496" cy="496" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="486" y="502" fill="#000000" style="font: bold 22px Cakra, serif;">{{ betweenHeartAndDollar2 }}</text>
+            <text x="486" y="502" fill="#000000" style="font: bold 22px Cakra, serif;">{{ betweenHeartAndDollar2}}</text>
 
         <circle cx="576" cy="464" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="546" y="432" fill="#9DBC78"
@@ -639,6 +639,132 @@
 </template>
 
 <script setup lang="ts">
+
+// import {useMatrix} from '~/store/matrix'
+// const matrixStore = useMatrix()
+
+
+// const birthday = ref('2006-07-31');
+// const birthdayTwo = ref('2007-01-03');
+// const matrix1 = ref<Matrix | null>(null)
+// const matrix2 = ref<Matrix | null>(null)
+
+// const calculateMatrices = () => {
+//   matrix1.value = calculateMatrix(birthday.value);
+//   matrix2.value = calculateMatrix(birthdayTwo.value);
+// };
+
+// const calculateMatrix = (birthdate: string): Matrix => {
+//   const arr = birthdate.split('-');
+//   const day = arr[2];
+//   const month = arr[1];
+//   const year = arr[0];
+
+//   const reduceNumber = (num: number): number => {
+//     while (num >= 10 && ![22].includes(num)) {
+//       num = num
+//         .toString()
+//         .split('')
+//         .reduce((a, el) => a + +el, 0);
+//     }
+//     return num;
+//   };
+
+//   const fateNum = reduceNumber(
+//     (day + month + year).split('').reduce((a, el) => a + +el, 0)
+//   ).toString();
+//   const dayNum = reduceNumber(day.split('').reduce((a, el) => a + +el, 0)).toString();
+//   const monthNum = reduceNumber(month.split('').reduce((a, el) => a + +el, 0)).toString();
+//   const yearNum = reduceNumber(year.split('').reduce((a, el) => a + +el, 0)).toString();
+//   const mainNum = reduceNumber(
+//     reduceNumber(+yearNum + +monthNum + +dayNum) + +fateNum
+//   ).toString();
+
+//   const leftUp = reduceNumber(+dayNum + +monthNum).toString();
+//   const rightUp = reduceNumber(+monthNum + +yearNum).toString();
+//   const rightDown = reduceNumber(+yearNum + +fateNum).toString();
+//   const leftDown = reduceNumber(+dayNum + +fateNum).toString();
+//   const thirdLeft = reduceNumber(+dayNum + +mainNum).toString();
+//   const secondLeft = reduceNumber(+dayNum + +thirdLeft).toString();
+//   const thirdCenter = reduceNumber(+monthNum + +mainNum).toString();
+//   const secondCenter = reduceNumber(+monthNum + +thirdCenter).toString();
+//   const thirdRight = reduceNumber(+yearNum + +mainNum).toString();
+//   const secondRight = reduceNumber(+yearNum + +thirdRight).toString();
+//   const thirdDown = reduceNumber(+fateNum + +mainNum).toString();
+//   const secondDown = reduceNumber(+fateNum + +thirdDown).toString();
+//   const secondMainRight = reduceNumber(
+//     +leftDown + +leftUp + +rightUp + +rightDown
+//   ).toString();
+//   const thirdLeftUp = reduceNumber(+leftUp + +secondMainRight).toString();
+//   const secondLeftUp = reduceNumber(+leftUp + +thirdLeftUp).toString();
+//   const thirdRightUp = reduceNumber(+rightUp + +secondMainRight).toString();
+//   const secondRightUp = reduceNumber(+rightUp + +thirdRightUp).toString();
+//   const thirdRightDown = reduceNumber(+rightDown + +secondMainRight).toString();
+//   const secondRightDown = reduceNumber(+rightDown + +thirdRightDown).toString();
+//   const thirdLeftDown = reduceNumber(+leftDown + +secondMainRight).toString();
+//   const secondLeftDown = reduceNumber(+leftDown + +thirdLeftDown).toString();
+//   const betweenHeartAndDollar = reduceNumber(+thirdDown + +thirdRight).toString();
+//   const heart = reduceNumber(+betweenHeartAndDollar + +thirdDown).toString();
+//   const dollar = reduceNumber(+betweenHeartAndDollar + +thirdRight).toString();
+//   const secondMainLeft = reduceNumber(+thirdLeft + +mainNum).toString();
+//   const thirdMainRight = reduceNumber(+mainNum + +secondMainRight).toString();
+//   const secondMainUp = reduceNumber(+mainNum + +thirdCenter).toString();
+//   const sky = reduceNumber(+monthNum + +fateNum).toString();
+//   const earth = reduceNumber(+dayNum + +yearNum).toString();
+//   const skyEarth = reduceNumber(+sky + +earth).toString();
+//   const manLine = reduceNumber(+leftUp + +rightDown).toString();
+//   const womanLine = reduceNumber(+leftDown + +rightUp).toString();
+//   const manWoman = reduceNumber(+manLine + +womanLine).toString();
+//   const spiritual = reduceNumber(+skyEarth + +manWoman).toString();
+//   const planetary = reduceNumber(+spiritual + +manWoman).toString();
+
+//   return {
+//     fateNum,
+//     dayNum,
+//     monthNum,
+//     yearNum,
+//     mainNum,
+//     leftUp,
+//     rightUp,
+//     rightDown,
+//     leftDown,
+//     thirdLeft,
+//     secondLeft,
+//     thirdCenter,
+//     secondCenter,
+//     thirdRight,
+//     secondRight,
+//     thirdDown,
+//     secondDown,
+//     secondMainRight,
+//     thirdLeftUp,
+//     secondLeftUp,
+//     thirdRightUp,
+//     secondRightUp,
+//     thirdRightDown,
+//     secondRightDown,
+//     thirdLeftDown,
+//     secondLeftDown,
+//     betweenHeartAndDollar,
+//     heart,
+//     dollar,
+//     secondMainLeft,
+//     thirdMainRight,
+//     secondMainUp,
+//     sky,
+//     earth,
+//     skyEarth,
+//     manLine,
+//     womanLine,
+//     manWoman,
+//     spiritual,
+//     planetary,
+//   };
+// };
+
+
+
+
 const birthday = ref('2006-07-31')
 const birthdayTwo = ref('2007-01-03')
 const fateNum = ref('')
@@ -982,9 +1108,9 @@ const calculate = () => {
 
     
     const arr2 = birthdayTwo.value.split('-')
-    const day2 = arr[2]
-    const month2 = arr[1]
-    const year2 = arr[0]
+    const day2 = arr2[2]
+    const month2 = arr2[1]
+    const year2 = arr2[0]
 
     let fateNumNum2 = (day2 + month2 + year2).split('').reduce((a, el) => a + (+el), 0)
     fateNum2.value = fateNumNum2.toString()
