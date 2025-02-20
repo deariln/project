@@ -85,27 +85,27 @@ const calculate = () => {
     yearNumberSt.value = yearNumberNum.toString()
 
     
-    let leftNumberNum = (parseInt(matrixStore.shared.dayNum) + parseInt(yearNumberSt.value))
+    let leftNumberNum = (matrixStore.shared.dayNum + parseInt(yearNumberSt.value))
     if (leftNumberNum > 22) {
         leftNumberNum = (leftNumberNum).toString().split('').reduce((a, el) => a + (+el), 0)
     }
     leftNumber.value = leftNumberNum.toString()
 
     
-    let upNumberNum = (parseInt(matrixStore.shared.monthNum) + parseInt(yearNumberSt.value))
+    let upNumberNum = (matrixStore.shared.monthNum + parseInt(yearNumberSt.value))
     if (upNumberNum > 22) {
         upNumberNum = (upNumberNum).toString().split('').reduce((a, el) => a + (+el), 0)
     }
     upNumber.value = upNumberNum.toString()
 
     
-    let rightNumberNum = (parseInt(matrixStore.shared.yearNum) + parseInt(yearNumberSt.value))
+    let rightNumberNum = (matrixStore.shared.yearNum + parseInt(yearNumberSt.value))
     if (rightNumberNum > 22) {
         rightNumberNum = (rightNumberNum).toString().split('').reduce((a, el) => a + (+el), 0)
     }
     rightNumber.value = rightNumberNum.toString()
 
-    let downNumberNum = (parseInt(matrixStore.shared.fateNum) + parseInt(yearNumberSt.value))
+    let downNumberNum = (matrixStore.shared.fateNum + parseInt(yearNumberSt.value))
     if (downNumberNum > 22) {
         downNumberNum = (downNumberNum).toString().split('').reduce((a, el) => a + (+el), 0)
     }

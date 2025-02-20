@@ -8,7 +8,6 @@
 
             <!-- <label for="birthday">Дата рождения:</label> -->
             <input class="input-date" type="date" id="birthday" name="birthday" v-model="birthday">
-            {{ birthday }} {{ fateNum }}
         </form>
         <!-- <iframe style="width: 100%; height: 850px; border: none; overflow: hidden;" src="https://matrix-profi.ru/yourcalc"></iframe> -->
     </div>
@@ -17,6 +16,7 @@
         <button class="butt-fate" @click="calculate">Рассчитать</button>
     </div>
 
+    
     <!-- <div style="margin: 10px 0; display: flex; align-items: center; justify-content: center; gap: 10px;">
     <span style="font-size:16px;">ПРОГНОСТИКА</span>
     <label class="toggle-switch">
@@ -75,135 +75,135 @@
             style="stroke-dasharray: 729.734; stroke-dashoffset: 0;"></line>
         <circle cx="36" cy="400" r="29" class="matrix-circle" style="stroke: rgb(174, 143, 190); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="30" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ dayNum }}</text>
+        <text x="30" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.dayNum }}</text>
 
         <circle cx="400" cy="36" r="29" class="matrix-circle" style="stroke: rgb(174, 143, 190); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="393" y="42" fill="#000000" style="font: bold 22px Cakra, serif;">{{ monthNum }}</text>
+        <text x="393" y="42" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.monthNum }}</text>
 
         <circle cx="764" cy="400" r="29" class="matrix-circle" style="stroke: rgb(199, 90, 90); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="760" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ yearNum }}</text>
+        <text x="760" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.yearNum }}</text>
 
         <circle cx="400" cy="764" r="29" class="matrix-circle" style="stroke: rgb(199, 90, 90); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="390" y="770" fill="#000000" style="font: bold 22px Cakra, serif;">{{ fateNum }}</text>
+        <text x="390" y="770" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.refMatrix.fateNum }}</text>
 
         <circle cx="400" cy="400" r="29" class="matrix-circle"
             style="stroke: rgb(191, 153, 161); fill: rgb(255, 255, 255);"></circle>
-        <text x="390" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ mainNum }}</text>
+        <text x="390" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.mainNum }}</text>
 
         <circle cx="142" cy="142" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-        <text x="133" y="147" fill="#000000" style="font: bold 22px Cakra, serif;">{{ leftUp }}</text>
+        <text x="133" y="147" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.leftUp }}</text>
 
         <circle cx="658" cy="142" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-        <text x="648" y="149" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightUp }}</text>
+        <text x="648" y="149" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.rightUp }}</text>
 
         <circle cx="658" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-        <text x="652" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ rightDown }}</text>
+        <text x="652" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.rightDown }}</text>
 
         <circle cx="142" cy="658" r="29" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="130" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ leftDown }}</text>
+            <text x="130" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.leftDown }}</text>
 
         <circle cx="142" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
-        <text x="133" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdLeft }}</text>
+        <text x="133" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdLeft }}</text>
 
         <circle cx="217" cy="217" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="205" y="223" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdLeftUp }}</text>
+            <text x="205" y="223" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdLeftUp }}</text>
 
         <circle cx="400" cy="142" r="22" class="matrix-circle"
             style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
-            <text x="391" y="150" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdCenter }}</text>
+            <text x="391" y="150" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdCenter }}</text>
 
         <circle cx="583" cy="217" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="574" y="224" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdRightUp }}</text>
+            <text x="574" y="224" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdRightUp }}</text>
 
         <circle cx="658" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(242, 181, 125); fill: rgb(255, 255, 255);"></circle>
-            <text x="648" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdRight }}</text>
+            <text x="648" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdRight }}</text>
 
         <circle cx="450" cy="400" r="20" class="matrix-circle"
             style="stroke: rgb(117, 117, 117); fill: rgb(255, 255, 255);"></circle>
-            <text x="445" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondMainRight }}</text>
+            <text x="445" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondMainRight }}</text>
 
         <circle cx="496" cy="400" r="20" class="matrix-circle"
             style="stroke: rgb(117, 117, 117); fill: rgb(255, 255, 255);"></circle>
-            <text x="489" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdMainRight }}</text>
+            <text x="489" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdMainRight }}</text>
 
 
         <circle cx="583" cy="583" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="574" y="589" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdRightDown }}</text>
+            <text x="574" y="589" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdRightDown }}</text>
 
         <circle cx="400" cy="658" r="22" class="matrix-circle"
             style="stroke: rgb(242, 181, 125); fill: rgb(255, 255, 255);"></circle>
-            <text x="395" y="663" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdDown }}</text>
+            <text x="395" y="663" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdDown }}</text>
 
         <circle cx="217" cy="583" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="210" y="588" fill="#000000" style="font: bold 22px Cakra, serif;">{{ thirdLeftDown }}</text>
+            <text x="210" y="588" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.thirdLeftDown }}</text>
 
         <circle cx="92" cy="400" r="22" class="matrix-circle" style="stroke: rgb(90, 112, 199); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="84" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondLeft }}</text>
+        <text x="84" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondLeft }}</text>
 
         <circle cx="182" cy="182" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="175" y="189" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondLeftUp }}</text>
+            <text x="175" y="189" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondLeftUp }}</text>
 
         <circle cx="400" cy="92" r="22" class="matrix-circle" style="stroke: rgb(90, 112, 199); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="393" y="100" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondCenter }}</text>
+        <text x="393" y="100" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondCenter }}</text>
 
         <circle cx="617" cy="182" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="610" y="190" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondRightUp }}</text>
+            <text x="610" y="190" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondRightUp }}</text>
 
         <circle cx="707" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="700" y="407" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondRight }}</text>
+            <text x="700" y="407" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondRight }}</text>
 
         <circle cx="617" cy="617" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="608" y="622" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondRightDown }}</text>
+            <text x="608" y="622" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondRightDown }}</text>
 
         <circle cx="400" cy="707" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="390" y="712" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondDown }}</text>
+            <text x="390" y="712" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondDown }}</text>
 
         <circle cx="182" cy="617" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="173" y="623" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondLeftDown }}</text>
+            <text x="173" y="623" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondLeftDown }}</text>
 
         <circle cx="264" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(137, 184, 151); fill: rgb(255, 255, 255);"></circle>
-            <text x="260" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondMainLeft }}</text>
+            <text x="260" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondMainLeft }}</text>
 
         <circle cx="400" cy="264" r="22" class="matrix-circle"
             style="stroke: rgb(137, 184, 151); fill: rgb(255, 255, 255);"></circle>
-            <text x="390" y="270" fill="#000000" style="font: bold 22px Cakra, serif;">{{ secondMainUp }}</text>
+            <text x="390" y="270" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.secondMainUp }}</text>
 
         <circle cx="496" cy="496" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="486" y="502" fill="#000000" style="font: bold 22px Cakra, serif;">{{ betweenHeartAndDollar }}</text>
+            <text x="486" y="502" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.betweenHeartAndDollar }}</text>
 
         <circle cx="576" cy="464" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="546" y="432" fill="#9DBC78"
             style="font: bold 22px Cakra, serif;">$</text>
-            <text x="570" y="470" fill="#000000" style="font: bold 22px Cakra, serif;">{{ dollar }}</text>
+            <text x="570" y="470" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.dollar }}</text>
 
 
         <circle cx="464" cy="576" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="434" y="544" fill="#EFA1A1"
             style="font: bold 30px Cakra, serif;">♥</text>
-            <text x="457" y="580" fill="#000000" style="font: bold 22px Cakra, serif;">{{ heart }}</text>
+            <text x="457" y="580" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.heart }}</text>
     </svg>
 
     <svg class="svg-two" viewBox="0 0 1024 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,16 +215,16 @@
         <path d="M350 210 L460 175" class="line"></path>
         <text x="300" y="145" text-anchor="end" class="title">Небо:</text>
         <circle cx="350" cy="140" r="25" class="circle"></circle>
-        <text x="345" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ sky }}</text>
+        <text x="345" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.sky }}</text>
 
         <text x="350" y="140" class="circle-label" id="svg31"></text>
         <text x="300" y="215" text-anchor="end" class="title">Земля:</text>
         <circle cx="350" cy="210" r="25" class="circle"></circle>
-        <text x="340" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ earth }}</text>
+        <text x="340" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.earth }}</text>
 
         <text x="350" y="210" class="circle-label" id="svg32"></text>
         <circle cx="460" cy="175" r="25" class="circle"></circle>
-        <text x="450" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ skyEarth }}</text>
+        <text x="450" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.skyEarth }}</text>
 
         <text x="460" y="175" class="circle-label" id="svg33"></text>
         <text x="710" y="50" text-anchor="middle" class="title">Социальное
@@ -234,26 +234,26 @@
         <path d="M690 210 L800 175" class="line"></path>
         <text x="640" y="145" text-anchor="end" class="title">М:</text>
         <circle cx="690" cy="140" r="25" class="circle"></circle>
-        <text x="681" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ manLine }}</text>
+        <text x="681" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manLine }}</text>
 
         <text x="690" y="140" class="circle-label" id="svg34"></text>
         <text x="640" y="215" text-anchor="end" class="title">Ж:</text>
         <circle cx="690" cy="210" r="25" class="circle"></circle>
-        <text x="680" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ womanLine }}</text>
+        <text x="680" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.womanLine }}</text>
 
         <text x="690" y="210" class="circle-label" id="svg35"></text>
         <circle cx="800" cy="175" r="25" class="circle"></circle>
-        <text x="795" y="182" fill="#000000" style="font: bold 22px Cakra, serif;">{{ manWoman }}</text>
+        <text x="795" y="182" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manWoman }}</text>
 
         <text x="800" y="175" class="circle-label" id="svg36"></text>
         <text x="400" y="290" text-anchor="end" class="title">Духовная гармония:</text>
         <circle cx="460" cy="270" r="25" class="circle"></circle>
-        <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ spiritual }}</text>
+        <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.spiritual }}</text>
 
         <text x="460" y="270" class="circle-label" id="svg37"></text>
         <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
         <circle cx="800" cy="270" r="25" class="circle"></circle>
-        <text x="791" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ planetary }}</text>
+        <text x="791" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.planetary }}</text>
 
         <text x="800" y="270" class="circle-label" id="svg38"></text>
     </svg>
@@ -269,329 +269,12 @@
 <script setup lang="ts">
 import {useMatrix} from '~/store/matrix'
 const birthday = ref('2006-07-31')
-const fateNum = ref('')
-const dayNum = ref('')
-const monthNum = ref('')
-const yearNum = ref('')
-const mainNum = ref('')
-const leftUp = ref('')
-const rightUp = ref('')
-const rightDown = ref('')
-const leftDown = ref('')
-const thirdLeft = ref('')
-const secondLeft = ref('')
-const thirdCenter = ref('')
-const secondCenter = ref('')
-const thirdRight = ref('')
-const secondRight = ref('')
-const thirdDown = ref('')
-const secondDown = ref('')
-const secondMainRight = ref('')
-const thirdLeftUp = ref('')
-const secondLeftUp = ref('')
-const thirdRightUp = ref('')
-const secondRightUp = ref('')
-const thirdRightDown = ref('')
-const secondRightDown = ref('')
-const thirdLeftDown = ref('')
-const secondLeftDown = ref('')
-const betweenHeartAndDollar = ref('')
-const heart = ref('')
-const dollar = ref('')
-const secondMainLeft = ref('')
-const thirdMainRight = ref('')
-const secondMainUp = ref('')
-const sky = ref('')
-const earth = ref('')
-const skyEarth = ref('')
-const manLine = ref('')
-const womanLine = ref('')
-const manWoman = ref('')
-const spiritual = ref('')
-const planetary = ref('')
 const matrixStore = useMatrix()
+const matrix = ref({} as any)
 
 const calculate = () => {
-    const arr = birthday.value.split('-')
-    const day = arr[2]
-    const month = arr[1]
-    const year = arr[0]
-
-    let fateNumNum = (day + month + year).split('').reduce((a, el) => a + (+el), 0)
-    if (fateNumNum > 22) {
-        fateNumNum = (fateNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    fateNum.value = fateNumNum.toString()
-    let dayNumNum = (day).split('').reduce((a, el) => a + (+el), 0)
-    if (dayNumNum > 22) {
-        dayNumNum = (dayNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    // if (![11, 22, 33].includes(dayNumNum)) {
-        //     dayNumNum = dayNumNum.toString().split('').reduce((a,el)=> a+(+el),0)
-        // }
-        dayNum.value = dayNumNum.toString()
-        
-        let monthNumNum = (month).split('').reduce((a, el) => a + (+el), 0)
-        if (monthNumNum > 22) {
-            monthNumNum = (monthNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
-        }
-        monthNum.value = monthNumNum.toString()
-        
-        
-        let yearNumNum = (year).split('').reduce((a, el) => a + (+el), 0)
-        if (yearNumNum > 22) {
-            yearNumNum = (yearNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
-        }
-        yearNum.value = yearNumNum.toString()
-    
-    let mainNumNum = (parseInt(yearNum.value) + parseInt(monthNum.value) + parseInt(dayNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0)
-    if (mainNumNum > 22) {
-        mainNumNum = (mainNumNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    let main = (mainNumNum + parseInt(fateNum.value)).toString().split('').reduce((a, el) => a + parseInt(el), 0);
-    mainNum.value = main.toString();
-    
-    let leftUpNum = (dayNum.value + monthNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
-    if (leftUpNum > 22) {
-        leftUpNum = (leftUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    leftUp.value = leftUpNum.toString()
-    
-    let rightUpNum = (monthNum.value + yearNum.value).toString().split('').reduce((a, el) => a + (+el), 0)
-    if (rightUpNum > 22) {
-        rightUpNum = (rightUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    rightUp.value = rightUpNum.toString()
-    
-    
-    let rightDownNum = (parseInt(yearNum.value) + parseInt(fateNum.value))
-    if (rightDownNum > 22) {
-        rightDownNum = (rightDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    rightDown.value = rightDownNum.toString()
-
-     
-    let leftDownNum = (parseInt(dayNum.value) + parseInt(fateNum.value))
-    if (leftDownNum > 22) {
-        leftDownNum = (leftDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    leftDown.value = leftDownNum.toString()
-    
-      
-    let thirdLeftNum = (parseInt(dayNum.value) + parseInt(mainNum.value))
-    if (thirdLeftNum > 22) {
-        thirdLeftNum = (thirdLeftNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdLeft.value = thirdLeftNum.toString()
-    
-          
-    let secondLeftNum = (parseInt(dayNum.value) + parseInt(thirdLeft.value))
-    if (secondLeftNum > 22) {
-        secondLeftNum = (secondLeftNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondLeft.value = secondLeftNum.toString()
-
-    
-    let thirdCenterNum = (parseInt(monthNum.value) + parseInt(mainNum.value))
-    if (thirdCenterNum > 22) {
-        thirdCenterNum = (thirdCenterNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdCenter.value = thirdCenterNum.toString()
-
-        
-    let secondCenterNum = (parseInt(monthNum.value) + parseInt(thirdCenter.value))
-    if (secondCenterNum > 22) {
-        secondCenterNum = (secondCenterNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondCenter.value = secondCenterNum.toString()
-
-
-    let thirdRightNum = (parseInt(yearNum.value) + parseInt(mainNum.value))
-    if (thirdRightNum > 22) {
-        thirdRightNum = (thirdRightNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdRight.value = thirdRightNum.toString()
-
-
-    let secondRightNum = (parseInt(yearNum.value) + parseInt(thirdRight.value))
-    if (secondRightNum > 22) {
-        secondRightNum = (secondRightNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondRight.value = secondRightNum.toString()
-
-
-    let thirdDownNum = (parseInt(fateNum.value) + parseInt(mainNum.value))
-    if (thirdDownNum > 22) {
-        thirdDownNum = (thirdDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdDown.value = thirdDownNum.toString()
-
-
-    let secondDownNum = (parseInt(fateNum.value) + parseInt(thirdDown.value))
-    if (secondDownNum > 22) {
-        secondDownNum = (secondDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondDown.value = secondDownNum.toString()
-
-    
-    let secondMainRightNum = (parseInt(leftDown.value) + parseInt(leftUp.value) + parseInt(rightUp.value) + parseInt(rightDown.value))
-    if (secondMainRightNum > 22) {
-        secondMainRightNum = (secondMainRightNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondMainRight.value = secondMainRightNum.toString()
-
-       
-    let thirdLeftUpNum = (parseInt(leftUp.value) + parseInt(secondMainRight.value))
-    if (thirdLeftUpNum > 22) {
-        thirdLeftUpNum = (thirdLeftUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdLeftUp.value = thirdLeftUpNum.toString()
-
-         
-    let secondLeftUpNum = (parseInt(leftUp.value) + parseInt(thirdLeftUp .value))
-    if (secondLeftUpNum > 22) {
-        secondLeftUpNum = (secondLeftUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondLeftUp.value = secondLeftUpNum.toString()
-
-
-    let thirdRightUpNum = (parseInt(rightUp.value) + parseInt(secondMainRight .value))
-    if (thirdRightUpNum > 22) {
-        thirdRightUpNum = (thirdRightUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdRightUp.value = thirdRightUpNum.toString()
-
-    
-    let secondRightUpNum = (parseInt(rightUp.value) + parseInt(thirdRightUp .value))
-    if (secondRightUpNum > 22) {
-        secondRightUpNum = (secondRightUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondRightUp.value = secondRightUpNum.toString()
-
-        
-    let thirdRightDownNum = (parseInt(rightDown.value) + parseInt(secondMainRight .value))
-    if (thirdRightDownNum > 22) {
-        thirdRightDownNum = (thirdRightDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdRightDown.value = thirdRightDownNum.toString()
-
-
-    let secondRightDownNum = (parseInt(rightDown.value) + parseInt(thirdRightDown .value))
-    if (secondRightDownNum > 22) {
-        secondRightDownNum = (secondRightDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondRightDown.value = secondRightDownNum.toString()
-
-
-    let thirdLeftDownNum = (parseInt(leftDown.value) + parseInt(secondMainRight .value))
-    if (thirdLeftDownNum > 22) {
-        thirdLeftDownNum = (thirdLeftDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdLeftDown.value = thirdLeftDownNum.toString()
-
-        
-    let secondLeftDownNum = (parseInt(leftDown.value) + parseInt(thirdLeftDown .value))
-    if (secondLeftDownNum > 22) {
-        secondLeftDownNum = (secondLeftDownNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondLeftDown.value = secondLeftDownNum.toString()
-
-            
-    let betweenHeartAndDollarNum = (parseInt(thirdDown.value) + parseInt( thirdRight.value))
-    if (betweenHeartAndDollarNum > 22) {
-        betweenHeartAndDollarNum = (betweenHeartAndDollarNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    betweenHeartAndDollar.value = betweenHeartAndDollarNum.toString()
-
-    let heartNum = (parseInt(betweenHeartAndDollar.value) + parseInt( thirdDown.value))
-    if (heartNum > 22) {
-        heartNum = (heartNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    heart.value = heartNum.toString()
-
-    
-    let dollarNum = (parseInt(betweenHeartAndDollar.value) + parseInt( thirdRight.value))
-    if (dollarNum > 22) {
-        dollarNum = (dollarNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    dollar.value = dollarNum.toString()
-
-    let secondMainLeftNum = (parseInt(thirdLeft.value) + parseInt( mainNum.value))
-    if (secondMainLeftNum > 22) {
-        secondMainLeftNum = (secondMainLeftNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondMainLeft.value = secondMainLeftNum.toString()
-
-    let thirdMainRightNum = (parseInt(mainNum.value) + parseInt( secondMainRight.value))
-    if (thirdMainRightNum > 22) {
-        thirdMainRightNum = (thirdMainRightNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    thirdMainRight.value = thirdMainRightNum.toString()
-
-    
-    let secondMainUpNum = (parseInt(mainNum.value) + parseInt( thirdCenter.value))
-    if (secondMainUpNum > 22) {
-        secondMainUpNum = (secondMainUpNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    secondMainUp.value = secondMainUpNum.toString()
-
-      
-    let skyNum = (parseInt(monthNum.value) + parseInt( fateNum.value))
-    if (skyNum > 22) {
-        skyNum = (skyNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    sky.value = skyNum.toString()
-
-    let earthNum = (parseInt(dayNum.value) + parseInt( yearNum.value))
-    if (earthNum > 22) {
-        earthNum = (earthNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    earth.value = earthNum.toString()
-
-    let skyEarthNum = (parseInt(sky.value) + parseInt( earth.value))
-    if (skyEarthNum > 22) {
-        skyEarthNum = (skyEarthNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    skyEarth.value = skyEarthNum.toString()
-
-    
-    let manLineNum = (parseInt(leftUp.value) + parseInt( rightDown.value))
-    if (manLineNum > 22) {
-        manLineNum = (manLineNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    manLine.value = manLineNum.toString()
-
-        
-    let womanLineNum = (parseInt(leftDown.value) + parseInt( rightUp.value))
-    if (womanLineNum > 22) {
-        womanLineNum = (womanLineNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    womanLine.value = womanLineNum.toString()
-
-    let manWomanNum = (parseInt(manLine.value) + parseInt( womanLine.value))
-    if (manWomanNum > 22) {
-        manWomanNum = (manWomanNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    manWoman.value = manWomanNum.toString()
-
-    let spiritualNum = (parseInt(skyEarth.value) + parseInt( manWoman.value))
-    if (spiritualNum > 22) {
-        spiritualNum = (spiritualNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    }
-    spiritual.value = spiritualNum.toString()
-
-    let planetaryNum = (parseInt(spiritual.value) + parseInt( manWoman.value))
-    if (planetaryNum > 22) {
-        planetaryNum = (planetaryNum).toString().split('').reduce((a, el) => a + (+el), 0)
-    } 
-    planetary.value = planetaryNum.toString()
-    matrixStore.shared.dayNum = dayNum.value
-    matrixStore.shared.monthNum = monthNum.value
-    matrixStore.shared.yearNum = yearNum.value
-    matrixStore.shared.fateNum = fateNum.value
+    matrix.value = matrixStore.calculateMatrix(birthday.value)
 }
 </script>
-
-
 
 <style scoped></style>
