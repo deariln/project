@@ -17,7 +17,7 @@
         <div class="parnter1">
             
             <div class="p-one_partner">
-                <p>Матрица первого партнера</p>
+                <h1>Матрица первого партнера</h1>
             </div>
             <svg id="partner1SVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet" >
                 <line id="lineC-1-2" x1="36" y1="400" x2="400" y2="36" class="line-segment"
@@ -234,7 +234,7 @@
 
         <div class="partner2">
             <div class="p-two_partner">
-                <p>Матрица второго партнера</p>
+                <h1>Матрица второго партнера</h1>
             </div>
     
             <svg id="partner2SVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
@@ -335,7 +335,7 @@
 
                 <circle cx="400" cy="400" r="29" class="matrix-circle"
                     style="stroke: rgb(191, 153, 161); fill: rgb(255, 255, 255);"></circle>
-                    <text x="390" y="406" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.mainNum }}</text>
+                    <text x="396" y="407" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.mainNum }}</text>
 
                 <circle cx="142" cy="142" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
@@ -363,7 +363,7 @@
 
         <circle cx="400" cy="142" r="22" class="matrix-circle"
             style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
-            <text x="391" y="150" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.thirdCenter }}</text>
+            <text x="395" y="150" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.thirdCenter }}</text>
 
         <circle cx="583" cy="217" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
@@ -388,7 +388,7 @@
 
         <circle cx="400" cy="658" r="22" class="matrix-circle"
             style="stroke: rgb(242, 181, 125); fill: rgb(255, 255, 255);"></circle>
-            <text x="395" y="663" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.thirdDown }}</text>
+            <text x="390" y="665" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.thirdDown }}</text>
 
         <circle cx="217" cy="583" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
@@ -396,11 +396,11 @@
 
         <circle cx="92" cy="400" r="22" class="matrix-circle" style="stroke: rgb(90, 112, 199); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="84" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondLeft }}</text>
+        <text x="80" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondLeft }}</text>
 
         <circle cx="182" cy="182" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="175" y="189" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondLeftUp2 }}</text>
+            <text x="173" y="189" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondLeftUp }}</text>
 
         <circle cx="400" cy="92" r="22" class="matrix-circle" style="stroke: rgb(90, 112, 199); fill: rgb(255, 255, 255);">
         </circle>
@@ -420,7 +420,7 @@
 
         <circle cx="400" cy="707" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
-            <text x="390" y="712" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondDown }}</text>
+            <text x="395" y="712" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondDown }}</text>
 
         <circle cx="182" cy="617" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
@@ -428,7 +428,7 @@
 
         <circle cx="264" cy="400" r="22" class="matrix-circle"
             style="stroke: rgb(137, 184, 151); fill: rgb(255, 255, 255);"></circle>
-            <text x="260" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondMainLeft }}</text>
+            <text x="255" y="408" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.secondMainLeft }}</text>
 
         <circle cx="400" cy="264" r="22" class="matrix-circle"
             style="stroke: rgb(137, 184, 151); fill: rgb(255, 255, 255);"></circle>
@@ -441,7 +441,7 @@
         <circle cx="576" cy="464" r="22" class="matrix-circle"
             style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle><text x="546" y="432" fill="#9DBC78"
             style="font: bold 22px Cakra, serif;">$</text>
-            <text x="570" y="470" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.dollar }}</text>
+            <text x="565" y="470" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix2.dollar }}</text>
 
 
         <circle cx="464" cy="576" r="22" class="matrix-circle"
