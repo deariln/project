@@ -636,12 +636,12 @@ const birthdayTwo = ref('2007-01-03')
 const matrixStore = useMatrix()
 const matrix1 = ref({} as any)
 const matrix2 = ref({} as any)
-const matrix3 = ref({} as any)
+// const matrix3 = ref({} as any)
 
 const calculate = () => {
     matrix1.value = matrixStore.calculateMatrix(birthday.value)
     matrix2.value = matrixStore.calculateMatrix(birthdayTwo.value)
-    matrix3.value.fateNum = matrixStore.onlyCheck(matrix1.value.fateNum+matrix2.value.fateNum)
+    // matrix3.value.fateNum = matrixStore.onlyCheck(matrix1.value.fateNum+matrix2.value.fateNum)
 }
 
 </script>
