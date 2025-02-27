@@ -540,26 +540,48 @@
                 <line id="lineC-7-9" x1="658" y1="142" x2="142" y2="658" class="line-segment"
                     style="stroke-dasharray: 729.734; stroke-dashoffset: 0; stroke: rgb(64, 62, 63); fill: none;">
                 </line>
+
+
                 <circle cx="36" cy="400" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 143, 190); fill: rgb(255, 255, 255);"></circle>
+                    <text x="28" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixLeft }}</text>
+
                 <circle cx="400" cy="36" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 143, 190); fill: rgb(255, 255, 255);"></circle>
+                    <text x="393" y="40" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixUp }}</text>
+
                 <circle cx="764" cy="400" r="29" class="matrix-circle"
                     style="stroke: rgb(199, 90, 90); fill: rgb(255, 255, 255);"></circle>
+                    <text x="756" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixRight }}</text>
+
                 <circle cx="400" cy="764" r="29" class="matrix-circle"
                     style="stroke: rgb(199, 90, 90); fill: rgb(255, 255, 255);"></circle>
+                    <text x="392" y="770" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixDown }}</text>
+
                 <circle cx="400" cy="400" r="29" class="matrix-circle"
                     style="stroke: rgb(191, 153, 161); fill: rgb(255, 255, 255);"></circle>
+                    <text x="390" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixMain }}</text>
+
                 <circle cx="142" cy="142" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+                    <text x="134" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixLeftUp }}</text>
+
                 <circle cx="658" cy="142" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+                    <text x="650" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixRightUp }}</text>
+
                 <circle cx="658" cy="658" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+                    <text x="650" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixRightDown }}</text>
+
                 <circle cx="142" cy="658" r="29" class="matrix-circle"
                     style="stroke: rgb(174, 164, 158); fill: rgb(255, 255, 255);"></circle>
+                    <text x="137" y="662" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixLeftDown }}</text>
+
                 <circle cx="142" cy="400" r="22" class="matrix-circle"
                     style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
+                    <text x="135" y="405" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrixLeftThird }}</text>
+
                
                 <circle cx="400" cy="142" r="22" class="matrix-circle"
                     style="stroke: rgb(163, 176, 224); fill: rgb(255, 255, 255);"></circle>
@@ -637,11 +659,31 @@ const matrixStore = useMatrix()
 const matrix1 = ref({} as any)
 const matrix2 = ref({} as any)
 // const matrix3 = ref({} as any)
+const matrixUp = ref({} as any)
+const matrixLeft = ref({} as any)
+const matrixRight = ref({} as any)
+const matrixDown = ref({} as any)
+const matrixMain = ref({} as any)
+const matrixLeftUp = ref({} as any)
+const matrixRightUp = ref({} as any)
+const matrixLeftDown = ref({} as any)
+const matrixRightDown = ref({} as any)
+const matrixLeftThird = ref({} as any)
 
 const calculate = () => {
     matrix1.value = matrixStore.calculateMatrix(birthday.value)
     matrix2.value = matrixStore.calculateMatrix(birthdayTwo.value)
     // matrix3.value.fateNum = matrixStore.onlyCheck(matrix1.value.fateNum+matrix2.value.fateNum)
+    matrixUp.value = matrixStore.onlyCheck(matrix1.value.monthNum + matrix2.value.monthNum)
+    matrixLeft.value = matrixStore.onlyCheck(matrix1.value.dayNum + matrix2.value.dayNum)
+    matrixRight.value = matrixStore.onlyCheck(matrix1.value.yearNum + matrix2.value.yearNum)
+    matrixDown.value = matrixStore.onlyCheck(matrix1.value.fateNum + matrix2.value.fateNum)
+    matrixMain.value = matrixStore.onlyCheck(matrix1.value.mainNum + matrix2.value.mainNum)
+    matrixLeftUp.value = matrixStore.onlyCheck(matrix1.value.leftUp + matrix2.value.leftUp)
+    matrixRightUp.value = matrixStore.onlyCheck(matrix1.value.rightUp + matrix2.value.rightUp)
+    matrixLeftDown.value = matrixStore.onlyCheck(matrix1.value.leftDown + matrix2.value.leftDown)
+    matrixRightDown.value = matrixStore.onlyCheck(matrix1.value.rightDown + matrix2.value.rightDown)
+    matrixLeftThird.value = matrixStore.onlyCheck(matrix1.value.matrixLeft + matrix2.value.matrixMain)
 }
 
 </script>
