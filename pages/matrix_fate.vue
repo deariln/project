@@ -87,7 +87,7 @@
 
         <circle cx="400" cy="764" r="29" class="matrix-circle" style="stroke: rgb(199, 90, 90); fill: rgb(255, 255, 255);">
         </circle>
-        <text x="390" y="770" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.refMatrix.fateNum }}</text>
+        <text x="390" y="770" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.fateNum }}</text>
 
         <circle cx="400" cy="400" r="29" class="matrix-circle"
             style="stroke: rgb(191, 153, 161); fill: rgb(255, 255, 255);"></circle>
