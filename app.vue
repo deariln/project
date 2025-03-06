@@ -25,4 +25,7 @@
 <script setup lang="ts">
 </script>
 
-<style>@import "~/assets/css/style.css";</style>
+<style>
+@import "~/assets/css/style.css";
+@import "~/assets/css/media.css";
+</style>

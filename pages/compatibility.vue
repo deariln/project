@@ -643,26 +643,42 @@
     <path d="M350 140 L460 175" class="line"></path>
     <path d="M350 210 L460 175" class="line"></path>
     <circle cx="350" cy="140" r="29" class="circle"></circle>
+    <text x="343" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ relationUp}}</text>
     <text x="350" y="140" class="circle-label" id="comp31"></text>
+    
     <circle cx="350" cy="210" r="29" class="circle"></circle>
+    <text x="345" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ relationDown}}</text>
+
     <text x="350" y="210" class="circle-label" id="comp32"></text>
     <circle cx="460" cy="175" r="29" class="circle"></circle>
+    <text x="453" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ relationship }}</text>
+
     <text x="460" y="175" class="circle-label" id="comp33"></text>
     <text x="710" y="50" text-anchor="middle" class="title">Партнерство в паре:</text>
     <path d="M690 140 L800 175" class="line"></path>
     <path d="M690 210 L800 175" class="line"></path>
     <circle cx="690" cy="140" r="29" class="circle"></circle>
+    <text x="685" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ partnerDown }}</text>
+
     <text x="690" y="140" class="circle-label" id="comp34"></text>
     <circle cx="690" cy="210" r="29" class="circle"></circle>
+    <text x="683" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ partnerUp }}</text>
+
     <text x="690" y="210" class="circle-label" id="comp35"></text>
     <circle cx="800" cy="175" r="29" class="circle"></circle>
+    <text x="793" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ partnership }}</text>
+
     <text x="800" y="175" class="circle-label" id="comp36"></text>
     <text x="400" y="290" text-anchor="end" class="title">Единство:</text>
     <circle cx="460" cy="270" r="29" class="circle"></circle>
+    <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ unity }}</text>
+
     <text x="460" y="270" class="circle-label" id="comp37"></text>
     <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
     <circle cx="800" cy="270" r="29" class="circle"></circle>
-    <text x="800" y="270" class="circle-label" id="comp38"></text>
+    <text x="793" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ planetary }}</text>
+
+    <text x="785" y="270" class="circle-label" id="comp38"></text>
   </svg>
 
 
@@ -700,7 +716,14 @@ const matrixHeart = ref(null as number|null)
 const matrixDollar = ref(null as number|null)
 const matrixMainLeft = ref(null as number|null)
 const matrixMainUp = ref(null as number|null)
-
+const relationUp = ref(null as number|null)
+const relationDown = ref(null as number|null)
+const relationship = ref(null as number|null)
+const partnerUp = ref(null as number|null)
+const partnerDown = ref(null as number|null)
+const partnership = ref(null as number|null)
+const unity = ref(null as number|null)
+const planetary = ref(null as number|null)
 
 const calculate = () => {
     matrix1.value = matrixStore.calculateMatrix(birthday.value)
@@ -728,6 +751,17 @@ const calculate = () => {
     matrixDollar.value = matrixStore.onlyCheck(matrixRightThird.value + matrixBetweenHeartDollar.value)
     matrixMainLeft.value = matrixStore.onlyCheck(matrixMain.value + matrixLeftThird.value)
     matrixMainUp.value = matrixStore.onlyCheck(matrixMain.value + matrixUpThird.value)
+
+    relationUp.value = matrixStore.onlyCheck(matrixUp.value + matrixDown.value)
+    relationDown.value = matrixStore.onlyCheck(matrixRight.value + matrixLeft.value)
+    relationship.value = matrixStore.onlyCheck(relationUp.value + relationDown.value)
+
+    partnerUp.value = matrixStore.onlyCheck(matrixLeftDown.value + matrixRightUp.value)
+    partnerDown.value = matrixStore.onlyCheck(matrixLeftUp.value + matrixRightDown.value)
+    partnership.value = matrixStore.onlyCheck(partnerUp.value + partnerDown.value)
+
+    unity.value = matrixStore.onlyCheck(relationship.value + partnership.value)
+    planetary.value = matrixStore.onlyCheck(unity.value + partnership.value)
 }
 
 </script>

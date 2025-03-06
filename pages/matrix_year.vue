@@ -10,14 +10,14 @@
              
             <!-- <label for="number">Год</label> -->
             <input class="input-year" type="number" min="1900" max="2099" step="1" placeholder="Год" v-model="yearNumber">
-            {{ birthday }}
+           
         </form>
     </div>
-    left {{ leftNumber }} year {{ yearNumberSt }}
+   
     <div class="div-butt_year">
         <button class="butt-year" @click="calculate" >Рассчитать</button>
     </div>
-    {{ matrixStore.shared }}
+  
 
     <svg id="matrixSVG" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
         <line id="line-1-2" x1="56" y1="400" x2="400" y2="56" class="line-segment"
