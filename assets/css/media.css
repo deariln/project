@@ -71,4 +71,12 @@
     .container-partners{
         gap: 5px;
     }
+
+    .matrix-fate{
+     width: 100px;
+    }
+
+    .matrix-year {
+        width: 200px;
+    }
 }
