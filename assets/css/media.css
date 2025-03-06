@@ -28,6 +28,7 @@
     .form{
         width: 100%;
         padding: 20px;
+        display: flex;
     }
     .div-butt_fate{
         width: 100%;
@@ -39,7 +40,7 @@
 
     .svg-two{
         width: 150%;
-        margin-left: -100px;
+        margin-left: -109px;
         
         
     }
@@ -64,7 +65,7 @@
 
     .svg-2000{
        width: 150%;
-       margin-left: -100px;
+       margin-left: -110px;
     }
 
     .container-partners{
