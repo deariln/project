@@ -6,12 +6,15 @@
       </button>
     </div>
     <div class="div-matrix_butt">
-      <NuxtLink to="/matrix_fate" class="matrix-fate">
-        Матрица судьбы
-      </NuxtLink>
-      <NuxtLink to="/matrix_year" class="matrix-year">
-        Матрица года
-      </NuxtLink>
+      <div class="fate-year-div">
+
+        <NuxtLink to="/matrix_fate" class="matrix-fate">
+          Матрица судьбы
+        </NuxtLink>
+        <NuxtLink to="/matrix_year" class="matrix-year">
+          Матрица года
+        </NuxtLink>
+      </div>
       <NuxtLink to="/compatibility" class="matrix-comp">
         Совместимость
       </NuxtLink>

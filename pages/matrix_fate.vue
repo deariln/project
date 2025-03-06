@@ -206,58 +206,59 @@
             <text x="457" y="580" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.heart }}</text>
     </svg>
 
-    <svg class="svg-two" viewBox="0 0 1024 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="svg-two-div">
+        <svg class="svg-two" viewBox="0 0 1024 300" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-        <text x="325" y="50" text-anchor="middle" class="title">Личное
-            <tspan x="325" dy="1.2em">предназначение:</tspan>
-        </text>
-        <path d="M350 140 L460 175" class="line"></path>
-        <path d="M350 210 L460 175" class="line"></path>
-        <text x="300" y="145" text-anchor="end" class="title">Небо:</text>
-        <circle cx="350" cy="140" r="25" class="circle"></circle>
-        <text x="345" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.sky }}</text>
+            <text x="325" y="50" text-anchor="middle" class="title">Личное
+                <tspan x="325" dy="1.2em">предназначение:</tspan>
+            </text>
+            <path d="M350 140 L460 175" class="line"></path>
+            <path d="M350 210 L460 175" class="line"></path>
+            <text x="300" y="145" text-anchor="end" class="title">Небо:</text>
+            <circle cx="350" cy="140" r="25" class="circle"></circle>
+            <text x="345" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.sky }}</text>
 
-        <text x="350" y="140" class="circle-label" id="svg31"></text>
-        <text x="300" y="215" text-anchor="end" class="title">Земля:</text>
-        <circle cx="350" cy="210" r="25" class="circle"></circle>
-        <text x="340" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.earth }}</text>
+            <text x="350" y="140" class="circle-label" id="svg31"></text>
+            <text x="300" y="215" text-anchor="end" class="title">Земля:</text>
+            <circle cx="350" cy="210" r="25" class="circle"></circle>
+            <text x="340" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.earth }}</text>
 
-        <text x="350" y="210" class="circle-label" id="svg32"></text>
-        <circle cx="460" cy="175" r="25" class="circle"></circle>
-        <text x="450" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.skyEarth }}</text>
+            <text x="350" y="210" class="circle-label" id="svg32"></text>
+            <circle cx="460" cy="175" r="25" class="circle"></circle>
+            <text x="450" y="180" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.skyEarth }}</text>
 
-        <text x="460" y="175" class="circle-label" id="svg33"></text>
-        <text x="710" y="50" text-anchor="middle" class="title">Социальное
-            <tspan x="710" dy="1.2em">предназначение:</tspan>
-        </text>
-        <path d="M690 140 L800 175" class="line"></path>
-        <path d="M690 210 L800 175" class="line"></path>
-        <text x="640" y="145" text-anchor="end" class="title">М:</text>
-        <circle cx="690" cy="140" r="25" class="circle"></circle>
-        <text x="681" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manLine }}</text>
+            <text x="460" y="175" class="circle-label" id="svg33"></text>
+            <text x="710" y="50" text-anchor="middle" class="title">Социальное
+                <tspan x="710" dy="1.2em">предназначение:</tspan>
+            </text>
+            <path d="M690 140 L800 175" class="line"></path>
+            <path d="M690 210 L800 175" class="line"></path>
+            <text x="640" y="145" text-anchor="end" class="title">М:</text>
+            <circle cx="690" cy="140" r="25" class="circle"></circle>
+            <text x="681" y="145" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manLine }}</text>
 
-        <text x="690" y="140" class="circle-label" id="svg34"></text>
-        <text x="640" y="215" text-anchor="end" class="title">Ж:</text>
-        <circle cx="690" cy="210" r="25" class="circle"></circle>
-        <text x="680" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.womanLine }}</text>
+            <text x="690" y="140" class="circle-label" id="svg34"></text>
+            <text x="640" y="215" text-anchor="end" class="title">Ж:</text>
+            <circle cx="690" cy="210" r="25" class="circle"></circle>
+            <text x="680" y="215" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.womanLine }}</text>
 
-        <text x="690" y="210" class="circle-label" id="svg35"></text>
-        <circle cx="800" cy="175" r="25" class="circle"></circle>
-        <text x="795" y="182" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manWoman }}</text>
+            <text x="690" y="210" class="circle-label" id="svg35"></text>
+            <circle cx="800" cy="175" r="25" class="circle"></circle>
+            <text x="795" y="182" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.manWoman }}</text>
 
-        <text x="800" y="175" class="circle-label" id="svg36"></text>
-        <text x="400" y="290" text-anchor="end" class="title">Духовная гармония:</text>
-        <circle cx="460" cy="270" r="25" class="circle"></circle>
-        <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.spiritual }}</text>
+            <text x="800" y="175" class="circle-label" id="svg36"></text>
+            <text x="400" y="290" text-anchor="end" class="title">Духовная гармония:</text>
+            <circle cx="460" cy="270" r="25" class="circle"></circle>
+            <text x="455" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.spiritual }}</text>
 
-        <text x="460" y="270" class="circle-label" id="svg37"></text>
-        <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
-        <circle cx="800" cy="270" r="25" class="circle"></circle>
-        <text x="791" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.planetary }}</text>
+            <text x="460" y="270" class="circle-label" id="svg37"></text>
+            <text x="740" y="290" text-anchor="end" class="title">Планетарное:</text>
+            <circle cx="800" cy="270" r="25" class="circle"></circle>
+            <text x="791" y="275" fill="#000000" style="font: bold 22px Cakra, serif;">{{ matrix.planetary }}</text>
 
-        <text x="800" y="270" class="circle-label" id="svg38"></text>
-    </svg>
-
+            <text x="800" y="270" class="circle-label" id="svg38"></text>
+        </svg>
+    </div>
 
 <!-- <text x="314.5667701651638"
         y="63.53274348956283" fill="#DFC4C9" font-size="15px" text-anchor="end"
