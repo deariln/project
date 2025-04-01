@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-
+        <p class="p-year">*Для расчета матрицы года нужно сначала рассчитать матрицу судьбы*</p>
         <form action="" class="form">
 
             <!-- <label  for="name" class="form__label">Name</label> -->
@@ -62,8 +62,8 @@
 
 <script setup lang="ts">
 import {useMatrix} from '~/store/matrix'
-const birthday = ref('2006-07-31')
-const yearNumber = ref('2025')
+const birthday = ref('')
+const yearNumber = ref('')
 const yearNumberSt = ref('')
 const leftNumber = ref('')
 const upNumber = ref('')

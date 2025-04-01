@@ -687,8 +687,8 @@
 
 <script setup lang="ts">
 import {useMatrix} from '~/store/matrix'
-const birthday = ref('2006-07-31')
-const birthdayTwo = ref('2007-01-03')
+const birthday = ref('')
+const birthdayTwo = ref('')
 
 const matrixStore = useMatrix()
 const matrix1 = ref({} as any)

@@ -14,10 +14,12 @@
         <NuxtLink to="/matrix_year" class="matrix-year">
           Матрица года
         </NuxtLink>
-      </div>
-      <NuxtLink to="/compatibility" class="matrix-comp">
-        Совместимость
-      </NuxtLink>
+     </div>
+     <div>
+       <NuxtLink to="/compatibility" class="matrix-comp">
+         Совместимость
+       </NuxtLink>
+     </div>
     </div>
     <NuxtLayout>
       <NuxtPage />

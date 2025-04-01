@@ -3,9 +3,7 @@
 
         <form action="" class="form">
             <!-- <label for="name" class="form__label">Имя</label> -->
-            <input class="input-text" type="text" placeholder="Имя" id="name" />
-
-
+    
             <!-- <label for="birthday">Дата рождения:</label> -->
             <input class="input-date" type="date" id="birthday" name="birthday" v-model="birthday">
         </form>
@@ -269,7 +267,7 @@
 
 <script setup lang="ts">
 import {useMatrix} from '~/store/matrix'
-const birthday = ref('2006-07-31')
+const birthday = ref('')
 const matrixStore = useMatrix()
 const matrix = ref({} as any)
 
